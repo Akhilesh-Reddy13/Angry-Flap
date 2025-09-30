@@ -45,7 +45,7 @@ async function main() {
         }
     }
     });
-    
+
     let imagesLoaded = 0;
     function tryStartGame() {
         imagesLoaded++;
@@ -102,13 +102,6 @@ async function main() {
             }
         }
         requestAnimationFrame(draw);
-    }
-
-    player.onload = () => {
-        pipe1.onload = () => {
-            initGame();
-            draw();
-        }
     }
 }
 
