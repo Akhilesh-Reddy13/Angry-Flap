@@ -45,6 +45,18 @@ async function main() {
         }
     }
     });
+    
+    let imagesLoaded = 0;
+    function tryStartGame() {
+        imagesLoaded++;
+        if (imagesLoaded === 2) {
+            initGame();
+            draw();
+        }
+    }
+
+    player.onload = tryStartGame;
+    pipe1.onload = tryStartGame;
 
     function draw() {
         document.getElementById("score1").innerHTML = score;
